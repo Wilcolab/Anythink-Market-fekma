@@ -6,13 +6,15 @@
     "node": ">=16"
   },
   "scripts": {
-    "start": "concurrently --kill-others \"cd frontend && ./start.sh\" \"cd backend && ./start.sh\""
+    "start": "concurrently --kill-others \"cd backend && ./start.sh\" \"cd frontend && ./start.sh\"",
+    "build": "for D in */; do yarn --cwd \"${D}\"; done"
   },
   "keywords": [],
   "author": "Wilco Inc.",
   "repository": {},
   "bugs": {},
   "homepage": "",
+  "license": "MIT",
   "dependencies": {
     "concurrently": "^6.0.0",
     "pg": "^8.5.1",
